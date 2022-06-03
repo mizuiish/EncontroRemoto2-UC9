@@ -18,10 +18,12 @@ novoEndPf.endComercial = true;
 
 //Console.WriteLine(metodosPf.ValidarDataNasc("01/01/2000"));
 
+novaPf.Endereco = novoEndPf;
+
 Console.WriteLine(@$"
 
 Nome: {novaPf.Nome}
-Endereço: {novoEndPf.Logradouro}, {novoEndPf.Numero}
+Endereço: {novaPf.Endereco.Logradouro}, {novaPf.Endereco.Numero}
 Maior de idade: {metodosPf.ValidarDataNasc(novaPf.dataNasc)}
 
 ");
