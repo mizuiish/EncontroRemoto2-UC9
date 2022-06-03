@@ -8,7 +8,7 @@ namespace CadastroPessoa.Classes
 
         public float Rendimento { get; set; }
         
-        public string? Endereco { get; set; }
+        public Endereco? Endereco { get; set; }
 
         public abstract float PagarImposto(float rendimento);
       

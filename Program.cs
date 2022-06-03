@@ -11,10 +11,21 @@ novaPf.Cpf = "1234567890";
 novaPf.Rendimento = 3500.5f;
 
 novoEndPf.Logradouro = "Alameda Barão de Limeira";
-novoEndPf.Numero = 315;
+novoEndPf.Numero = 539;
 novoEndPf.Complemento = "SENAI Informática";
 novoEndPf.endComercial = true;
 
-Console.WriteLine(novaPf.Nome);
 
-Console.WriteLine(metodosPf.ValidarDataNasc("01/01/2000"));
+//Console.WriteLine(metodosPf.ValidarDataNasc("01/01/2000"));
+
+Console.WriteLine(@$"
+
+Nome: {novaPf.Nome}
+Endereço: {novoEndPf.Logradouro}, {novoEndPf.Numero}
+Maior de idade: {metodosPf.ValidarDataNasc(novaPf.dataNasc)}
+
+");
+
+
+
+
