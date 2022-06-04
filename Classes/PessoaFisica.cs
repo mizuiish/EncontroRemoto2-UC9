@@ -28,7 +28,8 @@ namespace CadastroPessoa.Classes
 
         public bool ValidarDataNasc(string dataNasc)
         {
-
+            //tryParse irá fazer a conversão, primeiro argumento recebe o valor a ser convertido
+            //segundo argumento recebe out que será a conversão
             DateTime dataConvertida;
 
             if (DateTime.TryParse(dataNasc, out dataConvertida))
