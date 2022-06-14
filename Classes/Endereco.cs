@@ -11,7 +11,6 @@ namespace CadastroPessoa.Classes
         public bool endComercial { get; set; }
         
         
-        
-        
+
     }
 }
