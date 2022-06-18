@@ -51,9 +51,12 @@ do
 
 Nome: {novaPf.Nome}
 Endereço: {novaPf.Endereco.Logradouro}, {novaPf.Endereco.Numero}
-Maior de idade: {metodosPf.ValidarDataNasc(novaPf.dataNasc)}
+Maior de idade: {(metodosPf.ValidarDataNasc(novaPf.dataNasc) ? "Sim" : "Não")}
+Imposto a ser pago: {metodosPf.PagarImposto(novaPf.Rendimento).ToString("C")}
 
 ");
+
+// condição ? "Sim" : "Não"
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"Digite ENTER para  continuar.");
             Console.ResetColor();
@@ -85,6 +88,7 @@ Razão Social: {novaPj.RazaoSocial}
 CNPJ: {novaPj.Cnpj}, Válido: {metodosPj.ValidarCnpj(novaPj.Cnpj)}
 Endereço: {novaPj.Endereco.Logradouro}, {novaPj.Endereco.Numero}
 Complemento: {novaPj.Endereco.Complemento}
+Imposto a ser pago: {metodosPj.PagarImposto(novaPj.Rendimento).ToString("C")}
 
 ");
             Console.ForegroundColor = ConsoleColor.Yellow;
