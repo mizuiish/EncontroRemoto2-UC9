@@ -126,7 +126,14 @@ do
                         novaPf.Endereco = novoEndPf;
 
                         listaPf.Add(novaPf);
-                        //cor
+
+
+                        using (StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt"))
+                        {
+                            sw.WriteLine(novaPf.Nome);
+                        }
+
+
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Cadastro realizado com sucesso.");
                         Console.ResetColor();
@@ -138,26 +145,41 @@ do
 
                         Console.Clear();
 
-                        if (listaPf.Count > 0)
+                        //                         if (listaPf.Count > 0)
+                        //                         {
+                        //                             foreach (PessoaFisica cadaPessoa in listaPf)
+                        //                             {
+                        //                                 Console.WriteLine(@$"
+
+                        // Nome: {cadaPessoa.Nome}
+                        // Endereço: {cadaPessoa.Endereco.Logradouro}, {cadaPessoa.Endereco.Numero}
+                        // Imposto a ser pago: {metodosPf.PagarImposto(cadaPessoa.Rendimento).ToString("C")}
+
+                        // ");
+                        //                                 Console.WriteLine($"Aperte ENTER para continuar.");
+                        //                                 Console.ReadLine();
+                        //                             }
+                        //                         }
+                        //                         else
+                        //                         {
+                        //                             Console.WriteLine($"A lista está vazia");
+                        //                             Thread.Sleep(3000);
+                        //                         }
+
+
+                        //usa while para verificar se existem linhas para serem lidas. Caso linha seja diferente de nulo, a linha será lida
+                        using (StreamReader sr = new StreamReader("Nicolle.txt"))
                         {
-                            foreach (PessoaFisica cadaPessoa in listaPf)
+                            string linha;
+                            while ((linha = sr.ReadLine()) != null)
                             {
-                                Console.WriteLine(@$"
+                                Console.WriteLine($"{linha}");
 
-Nome: {cadaPessoa.Nome}
-Endereço: {cadaPessoa.Endereco.Logradouro}, {cadaPessoa.Endereco.Numero}
-Imposto a ser pago: {metodosPf.PagarImposto(cadaPessoa.Rendimento).ToString("C")}
-
-");
-                                Console.WriteLine($"Aperte ENTER para continuar.");
-                                Console.ReadLine();
                             }
+
                         }
-                        else
-                        {
-                            Console.WriteLine($"A lista está vazia");
-                            Thread.Sleep(3000);
-                        }
+                        Console.WriteLine($"Aperte ENTER para continuar");
+                        Thread.Sleep(3000);
 
                         break;
 
@@ -246,6 +268,20 @@ Imposto a ser pago: {metodosPf.PagarImposto(cadaPessoa.Rendimento).ToString("C")
                         novaPj.Endereco = novoEndPj;
 
                         listaPj.Add(novaPj);
+
+                        metodosPj.Inserir(novaPj);
+
+                        List<PessoaJuridica> ListPj = metodosPj.LerArquivo();
+                        foreach (PessoaJuridica cadaItem in ListPj)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(@$"
+Nome: {cadaItem.Nome}
+Razão Social: {cadaItem.RazaoSocial}
+Cnpj: {cadaItem.Cnpj}                            
+");
+                            
+                        }
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Cadastro realizado com sucesso.");
