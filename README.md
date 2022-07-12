@@ -22,9 +22,6 @@ Sistema criado para cadastrar os dados de um cliente, seja ele pessoa física ou
 
 Digitar no console do projeto *dotnet run* para iniciar a aplicação.
 
-**Erros Comuns:**
-
-
 **Contribuições:**
 
 Prof. Odirlei. 
