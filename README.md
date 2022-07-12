@@ -8,11 +8,15 @@ Sistema criado para cadastrar os dados de um cliente, seja ele pessoa física ou
 * Calculo para o pagamento de imposto para ambos os tipos de pessoas. 
 
 **Tecnologias utilizadas:**
-* C#
-* Github
-* Draw.io
 
-**Organização do Projeto:**
+*Back-End*
+
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
+- [.NET](https://dotnet.microsoft.com/download)
+
+*Editor*
+
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 **Pré-requisitos de instalação:**
 
@@ -20,7 +24,15 @@ Sistema criado para cadastrar os dados de um cliente, seja ele pessoa física ou
 
 **Execução de aplicação:**
 
-Digitar no console do projeto *dotnet run* para iniciar a aplicação.
+Clone o projeto com o comando abaixo:
+```bash
+  # Clone o repositório
+  ❯ git clone https://github.com/[mizuiish]/[EncontroRemoto2-UC9].git
+	# Entre no diretório
+  ❯ cd [EncontroRemoto2-UC9]
+	# Execute o projeto
+  ❯ dotnet run
+```
 
 **Contribuições:**
 
